@@ -40,7 +40,7 @@ class BillsController extends Controller
         if(! $request->bill_type or ! $request->month){
             return Response::json([
                 'error' => [
-                    'message' => 'Please Provide bill_type and month'
+                    'message' => 'Insert error: Please Provide bill_type and month'
                 ]
             ], 422);
         }
@@ -73,4 +73,25 @@ class BillsController extends Controller
 	        'message' => 'Bill Updated Succesfully'
 	    ]);
 	}
+
+    public function destroy($id)
+    {
+	    $bill = Bill::find($id);
+
+        if(!$bill)
+        {
+        	 return Response::json([
+                'error' => [
+                    'message' => 'Cannot find bill with id '.$id 
+                ]
+            ], 422);
+
+        }
+
+        Bill::destroy($id);
+    
+        return Response::json([
+	        'message' => 'Bill Deleted Succesfully'
+	    ]);
+    }
 }
