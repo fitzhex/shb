@@ -15,7 +15,7 @@ class BillsController extends Controller
 	    $bills = Bill::all(); //Not a good idea
 
 	    return Response::json([
-        'message' => $bills
+        'data' => $bills
         ], 200);
 	}
 
@@ -50,7 +50,7 @@ class BillsController extends Controller
         return Response::json([
                 'message' => 'bill Created Succesfully',
                 'data' => $bill
-        ]); 
+        ], 200); 
     }
 
 	public function update(Request $request, $id)
