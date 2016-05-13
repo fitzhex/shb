@@ -2,7 +2,7 @@
 <head>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/datatables.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/dt/dt-1.10.11/datatables.min.css"/>
 
 <script>
 $(document).ready(function(){
@@ -69,7 +69,7 @@ bill type: <select name="bill_type">
            </select> <br>
 month: <input type="text" name="month"> <br>
 amount: <input type="text" name="amount"> <br>
-date_pay: <input type="text" name="date_pay"> <br>
+date_pay: <input type="date" name="date_pay"> <br>
 <button id="btn_save_bill">Save</button>
 </div>
 <table id="example"></table>
