@@ -2,7 +2,7 @@
 <head>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/datatables.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/dt/dt-1.10.11/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="js/jquery.dataTables.min.css"/>
 
 <script>
 $(document).ready(function(){
